@@ -45,17 +45,25 @@ const Hero = ({ onOpenConsultation }: HeroProps) => {
             style={{ animationDelay: "0.1s" }}
           >
             {/* Animated Border Container */}
-            <div className="absolute inset-0 rounded-2xl overflow-hidden">
+            <div className="absolute inset-0 rounded-2xl">
               {/* Rotating gradient border */}
               <div 
-                className="absolute -inset-[100%] animate-spin-slow"
+                className="absolute -inset-1 rounded-2xl animate-spin-slow opacity-75"
                 style={{
-                  background: 'conic-gradient(from 0deg, hsl(var(--primary)), transparent 30%, hsl(var(--primary)) 50%, transparent 80%, hsl(var(--primary)))',
-                  animationDuration: '4s'
+                  background: 'linear-gradient(90deg, hsl(var(--primary)), hsl(210 100% 60%), hsl(var(--primary)), hsl(210 100% 70%), hsl(var(--primary)))',
+                  backgroundSize: '200% 100%',
+                  animation: 'spin-slow 3s linear infinite',
+                }}
+              />
+              {/* Glow effect */}
+              <div 
+                className="absolute -inset-2 rounded-2xl blur-md opacity-40 animate-pulse"
+                style={{
+                  background: 'linear-gradient(90deg, hsl(var(--primary)), hsl(210 100% 60%), hsl(var(--primary)))',
                 }}
               />
               {/* Inner dark background to create border effect */}
-              <div className="absolute inset-[2px] rounded-2xl bg-background" />
+              <div className="absolute inset-[3px] rounded-xl bg-background" />
             </div>
             
             {/* Text Content */}
