@@ -41,16 +41,16 @@ const Hero = ({ onOpenConsultation }: HeroProps) => {
 
           {/* Main Heading with Animated Border */}
           <div 
-            className="relative inline-block mb-6 animate-fade-up p-8 md:p-12"
+            className="relative inline-block mb-6 animate-fade-up px-8 py-10 md:px-16 md:py-14"
             style={{ animationDelay: "0.1s" }}
           >
             {/* Animated Border Container */}
             <div className="absolute inset-0 rounded-2xl overflow-hidden">
               {/* Rotating gradient border */}
               <div 
-                className="absolute inset-0 animate-spin-slow"
+                className="absolute -inset-[100%] animate-spin-slow"
                 style={{
-                  background: 'conic-gradient(from 0deg, hsl(var(--primary)), transparent, hsl(var(--primary)), transparent, hsl(var(--primary)))',
+                  background: 'conic-gradient(from 0deg, hsl(var(--primary)), transparent 30%, hsl(var(--primary)) 50%, transparent 80%, hsl(var(--primary)))',
                   animationDuration: '4s'
                 }}
               />
@@ -59,8 +59,8 @@ const Hero = ({ onOpenConsultation }: HeroProps) => {
             </div>
             
             {/* Text Content */}
-            <h1 className="relative text-3xl md:text-5xl lg:text-6xl font-bold">
-              <span className="block mb-4">لنبدأ من واقع تجاربنا</span>
+            <h1 className="relative text-2xl md:text-4xl lg:text-5xl font-bold whitespace-nowrap">
+              <span className="block mb-6">لنبدأ من واقع تجاربنا</span>
               <span className="block text-gradient">ومعاً نحو التحول الرقمي</span>
             </h1>
           </div>
