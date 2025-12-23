@@ -100,8 +100,8 @@ const ServicesSection = () => {
             </p>
           </div>
 
-          {/* Categories */}
-          <div className="space-y-10 max-w-5xl mx-auto">
+          {/* Categories with Cards */}
+          <div className="space-y-12 max-w-7xl mx-auto">
             {oldServices.map((category, categoryIndex) => (
               <div 
                 key={category.title} 
@@ -109,21 +109,20 @@ const ServicesSection = () => {
                 style={{ animationDelay: `${categoryIndex * 0.1}s` }}
               >
                 {/* Category Title */}
-                <h3 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-3">
+                <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-3">
                   <span className="w-2 h-2 rounded-full bg-primary" />
                   {category.title}
                 </h3>
                 
-                {/* Services Chips */}
-                <div className="flex flex-wrap gap-2">
-                  {category.services.map((service) => (
-                    <button
+                {/* Services Cards Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                  {category.services.map((service, serviceIndex) => (
+                    <ServiceCard
                       key={service.id}
+                      service={service}
                       onClick={() => handleServiceClick(service)}
-                      className="chip-outlined"
-                    >
-                      {service.name}
-                    </button>
+                      index={serviceIndex}
+                    />
                   ))}
                 </div>
               </div>
