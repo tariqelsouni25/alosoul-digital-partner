@@ -10,8 +10,8 @@ const ContactSection = ({ onOpenConsultation }: ContactSectionProps) => {
     {
       icon: Phone,
       label: "اتصل بنا",
-      value: "+966 54 101 2343",
-      href: "tel:+966541012343",
+      value: "+966 57 374 5145",
+      href: "tel:+966573745145",
       color: "text-green-400"
     },
     {
@@ -25,7 +25,7 @@ const ContactSection = ({ onOpenConsultation }: ContactSectionProps) => {
       icon: MessageCircle,
       label: "واتساب",
       value: "تواصل عبر الواتساب",
-      href: "https://wa.me/966541012343",
+      href: "https://wa.me/966573745145",
       color: "text-emerald-400",
       external: true
     }
@@ -99,8 +99,8 @@ const ContactSection = ({ onOpenConsultation }: ContactSectionProps) => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <p>© 2024 Alosoul AI Partner. جميع الحقوق محفوظة.</p>
           <div className="flex items-center gap-4">
-            <a href="tel:+966541012343" className="hover:text-foreground transition-colors">
-              +966 54 101 2343
+            <a href="tel:+966573745145" className="hover:text-foreground transition-colors">
+              +966 57 374 5145
             </a>
             <span>•</span>
             <a href="mailto:info@alosoultech.com" className="hover:text-foreground transition-colors">

@@ -118,7 +118,7 @@ const Hero = ({ onOpenConsultation }: HeroProps) => {
               <div className="text-xs md:text-sm text-muted-foreground">عميل سعيد</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-1">+5</div>
+              <div className="text-2xl md:text-3xl font-bold text-primary mb-1">+12</div>
               <div className="text-xs md:text-sm text-muted-foreground">سنوات خبرة</div>
             </div>
           </div>
