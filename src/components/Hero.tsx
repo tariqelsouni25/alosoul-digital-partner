@@ -1,6 +1,5 @@
 import { ArrowDown, Calendar, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
 
 interface HeroProps {
   onOpenConsultation: () => void;
@@ -34,34 +33,42 @@ const Hero = ({ onOpenConsultation }: HeroProps) => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Logo */}
-          <div className="mb-8 animate-fade-up">
-            <img 
-              src={logo} 
-              alt="Alosoul AI Partner" 
-              className="h-16 md:h-20 mx-auto" 
-            />
-          </div>
-
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-8 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-8 animate-fade-up">
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm text-primary font-medium">شريكك للتحول الرقمي</span>
           </div>
 
-          {/* Main Heading */}
-          <h1 
-            className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-up"
-            style={{ animationDelay: "0.2s" }}
+          {/* Main Heading with Animated Border */}
+          <div 
+            className="relative inline-block mb-6 animate-fade-up p-8 md:p-12"
+            style={{ animationDelay: "0.1s" }}
           >
-            لنبدأ من واقع تجاربنا{" "}
-            <span className="text-gradient">ومعاً نحو التحول الرقمي</span>
-          </h1>
+            {/* Animated Border Container */}
+            <div className="absolute inset-0 rounded-2xl overflow-hidden">
+              {/* Rotating gradient border */}
+              <div 
+                className="absolute inset-0 animate-spin-slow"
+                style={{
+                  background: 'conic-gradient(from 0deg, hsl(var(--primary)), transparent, hsl(var(--primary)), transparent, hsl(var(--primary)))',
+                  animationDuration: '4s'
+                }}
+              />
+              {/* Inner dark background to create border effect */}
+              <div className="absolute inset-[2px] rounded-2xl bg-background" />
+            </div>
+            
+            {/* Text Content */}
+            <h1 className="relative text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              لنبدأ من واقع تجاربنا{" "}
+              <span className="text-gradient">ومعاً نحو التحول الرقمي</span>
+            </h1>
+          </div>
 
           {/* Subtitle */}
           <p 
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up"
-            style={{ animationDelay: "0.3s" }}
+            style={{ animationDelay: "0.2s" }}
           >
             حلول ذكاء اصطناعي وأتمتة وتجارب رقمية ترفع الكفاءة وتحقق نتائج قابلة للقياس.
           </p>
@@ -69,7 +76,7 @@ const Hero = ({ onOpenConsultation }: HeroProps) => {
           {/* CTAs */}
           <div 
             className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up"
-            style={{ animationDelay: "0.4s" }}
+            style={{ animationDelay: "0.3s" }}
           >
             <Button
               size="lg"
@@ -93,7 +100,7 @@ const Hero = ({ onOpenConsultation }: HeroProps) => {
           {/* Stats */}
           <div 
             className="grid grid-cols-3 gap-4 md:gap-8 mt-16 pt-8 border-t border-border/30 animate-fade-up"
-            style={{ animationDelay: "0.5s" }}
+            style={{ animationDelay: "0.4s" }}
           >
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-primary mb-1">+50</div>
