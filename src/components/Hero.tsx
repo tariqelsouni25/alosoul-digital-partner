@@ -41,34 +41,35 @@ const Hero = ({ onOpenConsultation }: HeroProps) => {
 
           {/* Main Heading with Animated Border */}
           <div 
-            className="relative inline-block mb-6 animate-fade-up px-8 py-10 md:px-16 md:py-14"
+            className="relative mb-6 animate-fade-up"
             style={{ animationDelay: "0.1s" }}
           >
-            {/* Animated Border Container */}
-            <div className="absolute inset-0 rounded-2xl">
+            {/* Border Container */}
+            <div className="relative inline-block px-10 py-10 md:px-16 md:py-12">
               {/* Static gradient border */}
               <div 
-                className="absolute -inset-1 rounded-2xl opacity-75"
+                className="absolute inset-0 rounded-2xl"
                 style={{
-                  background: 'linear-gradient(90deg, hsl(var(--primary)), hsl(210 100% 60%), hsl(var(--primary)), hsl(210 100% 70%), hsl(var(--primary)))',
+                  background: 'linear-gradient(135deg, hsl(var(--primary)), hsl(210 100% 60%), hsl(var(--primary)))',
+                  padding: '3px',
                 }}
-              />
+              >
+                <div className="absolute inset-[3px] rounded-xl bg-background" />
+              </div>
               {/* Glow effect */}
               <div 
-                className="absolute -inset-2 rounded-2xl blur-md opacity-40"
+                className="absolute -inset-1 rounded-2xl blur-lg opacity-30"
                 style={{
-                  background: 'linear-gradient(90deg, hsl(var(--primary)), hsl(210 100% 60%), hsl(var(--primary)))',
+                  background: 'linear-gradient(135deg, hsl(var(--primary)), hsl(210 100% 60%), hsl(var(--primary)))',
                 }}
               />
-              {/* Inner dark background to create border effect */}
-              <div className="absolute inset-[3px] rounded-xl bg-background" />
+              
+              {/* Text Content */}
+              <h1 className="relative text-2xl md:text-4xl lg:text-5xl font-bold text-white text-center">
+                <span className="block mb-4">لنبدأ من واقع تجاربنا</span>
+                <span className="block">ومعاً نحو التحول الرقمي</span>
+              </h1>
             </div>
-            
-            {/* Text Content */}
-            <h1 className="relative text-2xl md:text-4xl lg:text-5xl font-bold whitespace-nowrap text-white">
-              <span className="block mb-6">لنبدأ من واقع تجاربنا</span>
-              <span className="block">ومعاً نحو التحول الرقمي</span>
-            </h1>
           </div>
 
           {/* Subtitle */}
