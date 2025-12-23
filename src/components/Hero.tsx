@@ -67,9 +67,9 @@ const Hero = ({ onOpenConsultation }: HeroProps) => {
             </div>
             
             {/* Text Content */}
-            <h1 className="relative text-2xl md:text-4xl lg:text-5xl font-bold whitespace-nowrap">
+            <h1 className="relative text-2xl md:text-4xl lg:text-5xl font-bold whitespace-nowrap text-white">
               <span className="block mb-6">لنبدأ من واقع تجاربنا</span>
-              <span className="block text-gradient">ومعاً نحو التحول الرقمي</span>
+              <span className="block">ومعاً نحو التحول الرقمي</span>
             </h1>
           </div>
 
